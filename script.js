@@ -209,9 +209,10 @@ function gameClear() {
     messageText.innerHTML = "CONGRATULATIONS!<br><span style='font-size:1rem'>あなたは FMKJ に一歩近づいた...</span>";
     explanationText.innerHTML = "しかし、これはまだ序章にすぎない。<br>さらなる試練があなたを待っているだろう。<br><br>TO BE CONTINUED...";
     explanationText.classList.remove('hidden');
-    restartBtn.classList.add('hidden'); // Hidden for game clear
+    restartBtn.classList.remove('hidden');
     nextStageBtn.classList.add('hidden');
     messageOverlay.classList.remove('hidden');
+    restartBtn.textContent = "PLAY AGAIN";
 }
 
 const prologueOverlay = document.getElementById('prologue-overlay');
@@ -252,6 +253,11 @@ async function playPrologue() {
 
     storyText.classList.add('hidden');
     startAdventureBtn.classList.remove('hidden');
+}
+
+function restartGame() {
+    initGame();
+    loadStage();
 }
 
 function startGame() {
