@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Battle</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="game-container">
+        <div id="background"></div>
+
+        <div id="ui-layer">
+            <div id="top-bar">
+                <div id="health-container">
+                    HP: <span id="health">❤️❤️❤️</span>
+                </div>
+                <div id="stage-container">
+                    STAGE: <span id="stage">1</span>/5
+                </div>
+            </div>
+
+            <div id="enemy-container">
+                <img id="enemy-img" src="assets/enemy1.png" alt="Enemy">
+            </div>
+
+            <div id="timer-container">
+                <div id="timer-bar"></div>
+            </div>
+
+            <div id="quiz-area">
+                <div id="question-box">
+                    <p id="question-text">Loading...</p>
+                </div>
+                <div id="options-grid">
+                    <button class="option-btn" onclick="checkAnswer(0)">Option 1</button>
+                    <button class="option-btn" onclick="checkAnswer(1)">Option 2</button>
+                    <button class="option-btn" onclick="checkAnswer(2)">Option 3</button>
+                    <button class="option-btn" onclick="checkAnswer(3)">Option 4</button>
+                </div>
+            </div>
+
+            <div id="message-overlay" class="hidden">
+                <h1 id="message-text"></h1>
+                <p id="explanation-text" class="hidden"></p>
+                <button id="restart-btn" onclick="restartGame()">RETRY</button>
+                <button id="next-stage-btn" class="hidden" onclick="nextStage()">NEXT STAGE</button>
+            </div>
+        </div>
+
+        <!-- Prologue Overlay -->
+        <div id="prologue-overlay">
+            <div id="prologue-content">
+                <div id="story-text"></div>
+                <button id="start-adventure-btn" class="hidden" onclick="startGame()">冒険に出る</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
