@@ -224,7 +224,7 @@ const storyLines = [
     "「神」と呼ばれる FMKJ に近づくため",
     "あなたは選ばれた",
     "彼に関するクイズに正解すること",
-    "それこそが世界平和への唯一の道",
+    "それこそが世界平和へ残された唯一の道",
     "準備はいいか？"
 ];
 
@@ -271,3 +271,4 @@ function startGame() {
 // Start the game flow
 initGame();
 playPrologue();
+
